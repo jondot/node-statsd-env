@@ -15,6 +15,9 @@ class Stats
   count: (m, v)->
     @stats.update_value @pref(m), v, s
 
+  timing: (m, v, s)->
+    @stats.timing @pref(m), v, s
+
   pref: (m)->
     "#{@prefix}.#{m}.#{@hostname}"
 
