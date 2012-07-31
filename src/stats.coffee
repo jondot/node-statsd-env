@@ -12,7 +12,7 @@ class Stats
   dec: (m, s)->
     @stats.decrement @pref(m), s
 
-  count: (m, v)->
+  count: (m, v, s)->
     @stats.update_value @pref(m), v, s
 
   timing: (m, v, s)->
