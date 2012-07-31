@@ -6,8 +6,14 @@ class Stats
     @stats = new StatsD(@host, @port)
     @hostname = os.hostname()
 
-  inc: (m ,v)->
-    @stats.increment @pref(m), v
+  inc: (m, s)->
+    @stats.increment @pref(m), s
+
+  dec: (m, s)->
+    @stats.decrement @pref(m), s
+
+  count: (m, v)->
+    @stats.update_value @pref(m), v, s
 
   pref: (m)->
     "#{@prefix}.#{m}.#{@hostname}"
