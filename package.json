@@ -1,0 +1,20 @@
+{
+  "author": "Dotan Nahum",
+  "name": "node-statsd-env",
+  "description": "Environmental node-statsd",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.6.1"
+  },
+  "homepage": "https://github.com/jondot/node-statsd-env",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jondot/node-statsd-env.git"
+  },
+  "main": "lib/stats.js",
+  "dependencies": {
+		"node-statsd" : ">= 0.0.2"
+  },
+  "devDependencies": {
+  }
+}
