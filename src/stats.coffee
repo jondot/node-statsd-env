@@ -12,6 +12,9 @@ class Stats
   dec: (m, s)->
     @stats.decrement @pref(m), s
 
+  gauge: (m, v, s)->
+    @stats.gauge @pref(m), v, s
+
   count: (m, v, s)->
     @stats.update_stats @pref(m), v, s
 
